@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saint Jean Paper Bank</title>
+    <style>
+        :root {
+            --primary-color: #004b87;
+            --secondary-color: #f4f7f6;
+            --text-color: #333;
+            --link-color: #0056b3;
+            --card-bg: #ffffff;
+            --border-color: #e1e8ed;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+        }
+
+        header {
+            background: var(--primary-color);
+            color: #fff;
+            padding: 3rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            margin: 10px 0 0;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .info-box {
+            background: #e8f4f8;
+            border-left: 4px solid var(--primary-color);
+            padding: 1rem 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.95rem;
+        }
+
+        .semester-section {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+        }
+
+        .semester-section h2 {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        .subject-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .subject-card {
+            background: #f9fbfd;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+            border-color: #c0d1df;
+        }
+
+        .subject-card h3 {
+            margin-top: 0;
+            font-size: 1.1rem;
+            color: #2c3e50;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px dashed #ccc;
+            padding-bottom: 8px;
+        }
+
+        .file-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 0 0;
+        }
+
+        .file-list li {
+            margin-bottom: 0.6rem;
+        }
+
+        .file-list a {
+            text-decoration: none;
+            color: var(--link-color);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            font-size: 0.95rem;
+        }
+
+        .file-list a::before {
+            content: '📄';
+            margin-right: 8px;
+            font-size: 1.1rem;
+        }
+
+        .file-list a:hover {
+            text-decoration: underline;
+            color: #003d82;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.15rem 0.5rem;
+            font-size: 0.75rem;
+            border-radius: 4px;
+            margin-left: auto;
+            font-weight: bold;
+        }
+
+        .badge-cc1 { background: #e3f2fd; color: #1565c0; }
+        .badge-cc2 { background: #fff3e0; color: #ef6c00; }
+        .badge-sn { background: #e8f5e9; color: #2e7d32; }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #777;
+            font-size: 0.9rem;
+            border-top: 1px solid #ddd;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Saint Jean Paper Bank</h1>
+        <p>Ressources Académiques & Archives d'Examens pour les Ingénieurs</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="info-box">
+            <strong>Bienvenue !</strong> Sélectionnez un document ci-dessous pour l'ouvrir directement. Ces fichiers sont hébergés de manière sécurisée sur Google Drive.
+        </div>
+
+        <!-- SEMESTER 1 -->
+        <section class="semester-section">
+            <h2>Semestre 1 (Ingénieur 1)</h2>
+            <div class="subject-grid">
+                
+                <div class="subject-card">
+                    <h3>Maths Analyse 1</h3>
+                    <ul class="file-list">
+                        <!-- REPLACE '#' WITH YOUR GOOGLE DRIVE FILE LINK -->
+                        <li><a href="#" target="_blank">Examen SN 2023 (PDF) <span class="badge badge-sn">SN</span></a></li>
+                        <li><a href="#" target="_blank">Devoir CC1 - Corrigé <span class="badge badge-cc1">CC1</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="subject-card">
+                    <h3>Physique Électromagnétique</h3>
+                    <ul class="file-list">
+                        <li><a href="#" target="_blank">Notes de cours complètes</a></li>
+                        <li><a href="#" target="_blank">Épreuve CC2 2024 <span class="badge badge-cc2">CC2</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="subject-card">
+                    <h3>Algorithmique</h3>
+                    <ul class="file-list">
+                        <li><a href="#" target="_blank">Travaux Pratiques 1 à 4</a></li>
+                        <li><a href="#" target="_blank">Examen Final 2022 <span class="badge badge-sn">SN</span></a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SEMESTER 2 -->
+        <section class="semester-section">
+            <h2>Semestre 2 (Ingénieur 1)</h2>
+            <div class="subject-grid">
+                
+                <div class="subject-card">
+                    <h3>Mathématiques Analyse 2</h3>
+                    <ul class="file-list">
+                        <li><a href="#" target="_blank">Fiche de TD - Intégrales</a></li>
+                        <li><a href="#" target="_blank">Épreuve CC1 <span class="badge badge-cc1">CC1</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="subject-card">
+                    <h3>Chimie</h3>
+                    <ul class="file-list">
+                        <li><a href="#" target="_blank">Synthèse Organique (PDF)</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+        
+        <!-- SEMESTER 3 -->
+        <section class="semester-section">
+            <h2>Semestre 3 (Ingénieur 2)</h2>
+            <div class="subject-grid">
+                
+                <div class="subject-card">
+                    <h3>Systèmes et Réseaux</h3>
+                    <ul class="file-list">
+                        <li><a href="#" target="_blank">Architecture OSI</a></li>
+                        <li><a href="#" target="_blank">Examen SN <span class="badge badge-sn">SN</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="subject-card">
+                    <h3>Introduction au Langage C</h3>
+                    <ul class="file-list">
+                        <li><a href="#" target="_blank">Les Pointeurs - Cours</a></li>
+                        <li><a href="#" target="_blank">Sujet CC2 <span class="badge badge-cc2">CC2</span></a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        &copy; 2026 Saint Jean Paper Bank. Maintained by the St. Jean Engineering Community.
+    </footer>
+
+</body>
+</html>
